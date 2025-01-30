@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <title>Tailwind Project</title>
+    <link rel="stylesheet" href="new.css">
+</head>
+<body>
+    <!-- Navbar is starting ok -->
+    <nav class="p-3 flex bg-white justify-between items-center fixed top-0 left-0 right-0 z-20 shadow-md">
+        <a href="#" id="brand" class="flex gap-2 items-center flex-1">
+            <img class="object-cover max-w-12 max-h-12" src="asset 0.png" alt="Logo">
+            <span class="text-lg font-medium font-display">ToDesktop</span>
+        </a>
+        <div id="nav-menu" class="hidden lg:flex gap-12">
+            <a href="#" class="font-medium hover:text-primary">Pricing</a>
+            <a href="#" class="font-medium hover:text-primary">Docs</a>
+            <a href="#" class="font-medium hover:text-primary">Changelog</a>
+            <a href="#" class="font-medium hover:text-primary">Blogs</a>
+            <a href="#" class="font-medium hover:text-primary">Login</a>
+        </div>
+        <div class="hidden lg:flex flex-1 justify-end">
+            <button class="flex gap-2 items-center border border-gray-400 px-6 py-2 rounded-lg hover:border-gray-600">
+                <img src="asset 1.svg" alt="">
+                <span class="font-display font-medium">Electron Developers</span>
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+        
+
+        <button class="p-2 lg:hidden" onclick="Menu()">
+            <i class="fa-solid fa-bars text-gray-600"></i>
+        </button>
+
+        <div id="nav-dialog" class="hidden fixed z-10 md:hidden bg-white inset-0 p-3">
+            <div id="nav-bar" class="flex justify-between">
+                <a href="#" id="brand" class="flex gap-2 items-center">
+                    <img class="object-cover max-w-12 max-h-12" src="asset 0.png" alt="Logo">
+                    <span class="text-lg font-medium font-display">ToDesktop</span>
+                </a>
+                <button class="p-2 md:hidden" onclick="Menu()">
+                    <i class="fa-solid fa-xmark text-gray-600"></i>
+                </button>
+            </div>
+            <div class="mt-6">
+                <a href="#" class="font-medium m-3 p-3 hover:bg-gray-100 block rounded-lg">Pricing</a>
+                <a href="#" class="font-medium m-3 p-3 hover:bg-gray-100 block rounded-lg">Docs</a>
+                <a href="#" class="font-medium m-3 p-3 hover:bg-gray-100 block rounded-lg">Changelog</a>
+                <a href="#" class="font-medium m-3 p-3 hover:bg-gray-100 block rounded-lg">Blogs</a>
+                <a href="#" class="font-medium m-3 p-3 hover:bg-gray-100 block rounded-lg">Login</a>
+            </div>
+            <div class="h-[1px] bg-gray-300"></div>
+            <button class="mt-6 w-full flex gap-2 items-center  px-6 py-4 rounded-lg hover:bg-gray-100">
+                <img src="asset 1.svg" alt="">
+                <span>Electron Developers</span>
+            </button>
+        </div>
+    </nav><!--Navbar is completed ok-->
+    <main class="mt-16">
+    <!--Hero section started ok-->
+    <div id="hero" class="min-h-screen bg-gradient-to-b from-purple-50 via bg-orange-50 to-transparent">
+        <div id="hero-container" class="max-w-4xl mx-auto px-6 pb-32 pt-6 flex flex-col sm:text-center sm:items-center sm:pt-12">
+            <div id="version-text" class="flex items-center border border-yellow-300 bg-yellow-50  rounded-lg px-3 py-1 w-fit my-6 gap-2 shadow-md hover:shadow-lg hover:-translate-y-1 transition group">
+                <div class="w-2 h-2 bg-yellow-400 rounded-full border-yellow-600">
+                </div>
+                <p class="font-display font-medium text-yellow-600">v0.21.1:<span class="text-yellow-800">Find-in-page bug fixes</span></p>
+                <i class="fa-solid fa-arrow-right text-yellow-600 group-hover:translate-x-1 transition duration-300"></i>
+            </div>
+            <div id="hero-features" class="hidden sm:flex my-6 gap-8 hover:cursor-pointer"><!--System button is started-->
+                <div class="text-gray-500 gap-2 flex justify-center items-center">
+                    <i class="fa-solid fa-file-code text-sm"></i>
+                    <p>Code optional</p>
+                </div>
+                <div class="text-gray-500  gap-2 flex justify-center items-center">
+                    <i class="fa-solid fa-hand-fist text-sm"></i>
+                    <p>Drag & drop builder</p>
+                </div>
+                <div class="text-gray-500  gap-2 flex justify-center items-center">
+                    <i class="fa-solid fa-laptop text-sm"></i>
+                    <p>Window,Mac,Linux</p>
+                </div>
+            </div>
+            <h1 class="font-bold font-display leading-snug mt-4 text-4xl sm:text-7xl sm:leading-tight">Web app to desktop app in minute</h1>
+            <p class="mt-4 text-xl text-gray-500 sm:text-2xl sm:text-gray-800">Take your web app codebase and transform it into a cross platform desktop app with native functionality</p>
+          <div id="button-container" class="flex flex-col sm:flex-row gap-4 mt-6 sm:justify-center">
+            <button class="border border-blue-500 bg-blue-700 text-white rounded-lg font-medium hover:opacity-90 px-4 py-2">Download now</button>
+            <button class=" border border-gray-400 bg-white rounded-lg px-4 py-2 font-medium hover:border-gray-800">Read Docs</button>
+          </div>  
+        </div>
+       <div id="comapnies-contianer" class="flex flex-col gap-8">
+        <div id="companies-title" class="flex justify-center gap-2">
+            <img src="asset 2.svg" class="translate-y-2" alt="arrow">
+            <span class="font-medium">APPS POWERED BY TODESKTOP</span>
+            <img src="asset 2.svg" class="-scale-x-100 translate-y-2" alt="arrow">
+        </div>
+        <div id="line-group" class="flex flex-col gap-4">
+            <div id="line1" class="flex w-screen gap-2 -translate-x-48 transition-transform ease-linear">
+                <div class="flex flex-col min-h-24 min-w-24 justify-center items-center bg-white border rounded-xl border-gray-300 md:min-h-32 md:min-w-32">
+                    <img src="asset 3.png" class="h-12 w-12 md:h-16 md:w-16"  alt="">
+                    <span class="text-[12px] font-medium md:text-[16px]">Rabit-fire</span>
+                </div>
+                <div class="flex flex-col min-h-24 min-w-24 justify-center items-center bg-white border rounded-xl border-gray-300 md:min-h-32 md:min-w-32">
+                    <img src="asset 3.png" class="h-12 w-12 md:h-16 md:w-16"  alt="">
+                    <span class="text-[12px] font-medium md:text-[16px]">Rabit-fire</span>
+                </div>
+                <div class="flex flex-col min-h-24 min-w-24 justify-center items-center bg-white border rounded-xl border-gray-300 md:min-h-32 md:min-w-32">
+                    <img src="asset 32.png" class="h-12 w-12 md:h-16 md:w-16"  alt="">
+                    <span class="text-[12px] font-medium md:text-[16px]">Rabit-fire</span>
+                </div>
+                <div class="flex flex-col min-h-24 min-w-24 justify-center items-center bg-white border rounded-xl border-gray-300 md:min-h-32 md:min-w-32">
+                    <img src="asset 34.png" class="h-12 w-12 md:h-16 md:w-16"  alt="">
+                    <span class="text-[12px] font-medium md:text-[16px]">Rabit-fire</span>
+                </div>
+                <div class="flex flex-col min-h-24 min-w-24 justify-center items-center bg-white border rounded-xl border-gray-300 md:min-h-32 md:min-w-32">
+                    <img src="asset 35.png" class="h-12 w-12 md:h-16 md:w-16"  alt="">
+                    <span class="text-[12px] font-medium md:text-[16px]">Rabit-fire</span>
+                </div>
+                <div class="flex flex-col min-h-24 min-w-24 justify-center items-center bg-white border rounded-xl border-gray-300 md:min-h-32 md:min-w-32">
+                    <img src="asset 10 (1).png" class="h-12 w-12 md:h-16 md:w-16"  alt="">
+                    <span class="text-[12px] font-medium md:text-[16px]">Rabit-fire</span>
+                </div>
+                <div class="flex flex-col min-h-24 min-w-24 justify-center items-center bg-white border rounded-xl border-gray-300 md:min-h-32 md:min-w-32">
+                    <img src="asset 14.png" class="h-12 w-12 md:h-16 md:w-16"  alt="">
+                    <span class="text-[12px] font-medium md:text-[16px]">Rabit-fire</span>
+                </div>
+                <div class="flex flex-col min-h-24 min-w-24 justify-center items-center bg-white border rounded-xl border-gray-300 md:min-h-32 md:min-w-32">
+                    <img src="asset 15.png" class="h-12 w-12 md:h-16 md:w-16"  alt="">
+                    <span class="text-[12px] font-medium md:text-[16px]">Rabit-fire</span>
+                </div>
+                <div class="flex flex-col min-h-24 min-w-24 justify-center items-center bg-white border rounded-xl border-gray-300 md:min-h-32 md:min-w-32">
+                    <img src="asset 16.png" class="h-12 w-12 md:h-16 md:w-16"  alt="">
+                    <span class="text-[12px] font-medium md:text-[16px]">Rabit-fire</span>
+                </div>
+                <div class="flex flex-col min-h-24 min-w-24 justify-center items-center bg-white border rounded-xl border-gray-300 md:min-h-32 md:min-w-32">
+                    <img src="asset 3.png" class="h-12 w-12 md:h-16 md:w-16"  alt="">
+                    <span class="text-[12px] font-medium md:text-[16px]">Rabit-fire</span>
+                </div>
+                <div class="flex flex-col min-h-24 min-w-24 justify-center items-center bg-white border rounded-xl border-gray-300 md:min-h-32 md:min-w-32">
+                    <img src="asset 3.png" class="h-12 w-12 md:h-16 md:w-16"  alt="">
+                    <span class="text-[12px] font-medium md:text-[16px]">Rabit-fire</span>
+                </div>
+                <div class="flex flex-col min-h-24 min-w-24 justify-center items-center bg-white border rounded-xl border-gray-300 md:min-h-32 md:min-w-32">
+                    <img src="asset 17.png" class="h-12 w-12 md:h-16 md:w-16"  alt="">
+                    <span class="text-[12px] font-medium md:text-[16px]">Rabit-fire</span>
+                </div>
+            </div>
+            <div id="line2" class="flex w-screen gap-2 -translate-x-36 transition-transform ease-linear">
+                <div class="flex flex-col min-h-24 min-w-24 justify-center items-center bg-white border rounded-xl border-gray-300 md:min-h-32 md:min-w-32">
+                    <img src="asset 3.png" class="h-12 w-12 md:h-16 md:w-16"  alt="">
+                    <span class="text-[12px] font-medium md:text-[16px]">Rabit-fire</span>
+                </div>
+                <div class="flex flex-col min-h-24 min-w-24 justify-center items-center bg-white border rounded-xl border-gray-300 md:min-h-32 md:min-w-32">
+                    <img src="asset 3.png" class="h-12 w-12 md:h-16 md:w-16"  alt="">
+                    <span class="text-[12px] font-medium md:text-[16px]">Rabit-fire</span>
+                </div>
+                <div class="flex flex-col min-h-24 min-w-24 justify-center items-center bg-white border rounded-xl border-gray-300 md:min-h-32 md:min-w-32">
+                    <img src="asset 3.png" class="h-12 w-12 md:h-16 md:w-16"  alt="">
+                    <span class="text-[12px] font-medium md:text-[16px]">Rabit-fire</span>
+                </div>
+                <div class="flex flex-col min-h-24 min-w-24 justify-center items-center bg-white border rounded-xl border-gray-300 md:min-h-32 md:min-w-32">
+                    <img src="asset 18.png" class="h-12 w-12 md:h-16 md:w-16"  alt="">
+                    <span class="text-[12px] font-medium md:text-[16px]">Rabit-fire</span>
+                </div>
+                <div class="flex flex-col min-h-24 min-w-24 justify-center items-center bg-white border rounded-xl border-gray-300 md:min-h-32 md:min-w-32">
+                    <img src="asset 11 (1).png" class="h-12 w-12 md:h-16 md:w-16"  alt="">
+                    <span class="text-[12px] font-medium md:text-[16px]">Rabit-fire</span>
+                </div>
+                <div class="flex flex-col min-h-24 min-w-24 justify-center items-center bg-white border rounded-xl border-gray-300 md:min-h-32 md:min-w-32">
+                    <img src="asset 19.png" class="h-12 w-12 md:h-16 md:w-16"  alt="">
+                    <span class="text-[12px] font-medium md:text-[16px]">Rabit-fire</span>
+                </div>
+                <div class="flex flex-col min-h-24 min-w-24 justify-center items-center bg-white border rounded-xl border-gray-300 md:min-h-32 md:min-w-32">
+                    <img src="asset 3.png" class="h-12 w-12 md:h-16 md:w-16"  alt="">
+                    <span class="text-[12px] font-medium md:text-[16px]">Rabit-fire</span>
+                </div>
+                <div class="flex flex-col min-h-24 min-w-24 justify-center items-center bg-white border rounded-xl border-gray-300 md:min-h-32 md:min-w-32">
+                    <img src="asset 20.png" class="h-12 w-12 md:h-16 md:w-16"  alt="">
+                    <span class="text-[12px] font-medium md:text-[16px]">Rabit-fire</span>
+                </div>
+                <div class="flex flex-col min-h-24 min-w-24 justify-center items-center bg-white border rounded-xl border-gray-300 md:min-h-32 md:min-w-32">
+                    <img src="asset 22.png" class="h-12 w-12 md:h-16 md:w-16"  alt="">
+                    <span class="text-[12px] font-medium md:text-[16px]">Rabit-fire</span>
+                </div>
+                <div class="flex flex-col min-h-24 min-w-24 justify-center items-center bg-white border rounded-xl border-gray-300 md:min-h-32 md:min-w-32">
+                    <img src="asset 3.png" class="h-12 w-12 md:h-16 md:w-16"  alt="">
+                    <span class="text-[12px] font-medium md:text-[16px]">Rabit-fire</span>
+                </div>
+                <div class="flex flex-col min-h-24 min-w-24 justify-center items-center bg-white border rounded-xl border-gray-300 md:min-h-32 md:min-w-32">
+                    <img src="asset 3.png" class="h-12 w-12 md:h-16 md:w-16"  alt="">
+                    <span class="text-[12px] font-medium md:text-[16px]">Rabit-fire</span>
+                </div>
+                <div class="flex flex-col min-h-24 min-w-24 justify-center items-center bg-white border rounded-xl border-gray-300 md:min-h-32 md:min-w-32">
+                    <img src="asset 3.png" class="h-12 w-12 md:h-16 md:w-16"  alt="">
+                    <span class="text-[12px] font-medium md:text-[16px]">Rabit-fire</span>
+                </div>
+        </div>
+        <div id="line3" class=" md:hidden flex w-screen gap-2 -translate-x-48 transition-transform ease-linear">
+            <div class="flex flex-col min-h-24 min-w-24 justify-center items-center bg-white border rounded-xl border-gray-300">
+                <img src="asset 3.png" class="h-12 w-12 md:h-16 md:w-16"  alt="">
+                <span class="text-[12px] font-medium md:text-[16px]">Rabit-fire</span>
+            </div>
+            <div class="flex flex-col min-h-24 min-w-24 justify-center items-center bg-white border rounded-xl border-gray-300">
+                <img src="asset 3.png" class="h-12 w-12 md:h-16 md:w-16"  alt="">
+                <span class="text-[12px] font-medium md:text-[16px]">Rabit-fire</span>
+            </div>
+            <div class="flex flex-col min-h-24 min-w-24 justify-center items-center bg-white border rounded-xl border-gray-300">
+                <img src="asset 22.png" class="h-12 w-12 md:h-16 md:w-16"  alt="">
+                <span class="text-[12px] font-medium md:text-[16px]">Rabit-fire</span>
+            </div>
+            <div class="flex flex-col min-h-24 min-w-24 justify-center items-center bg-white border rounded-xl border-gray-300">
+                <img src="asset 25.png" class="h-12 w-12 md:h-16 md:w-16"  alt="">
+                <span class="text-[12px] font-medium md:text-[16px]">Rabit-fire</span>
+            </div>
+            <div class="flex flex-col min-h-24 min-w-24 justify-center items-center bg-white border rounded-xl border-gray-300">
+                <img src="asset 12 (1).png" class="h-12 w-12 md:h-16 md:w-16"  alt="">
+                <span class="text-[12px] font-medium md:text-[16px]">Rabit-fire</span>
+            </div>
+            <div class="flex flex-col min-h-24 min-w-24 justify-center items-center bg-white border rounded-xl border-gray-300">
+                <img src="asset 26.png" class="h-12 w-12 md:h-16 md:w-16"  alt="">
+                <span class="text-[12px] font-medium md:text-[16px]">Rabit-fire</span>
+            </div>
+            <div class="flex flex-col min-h-24 min-w-24 justify-center items-center bg-white border rounded-xl border-gray-300">
+                <img src="asset 27.png" class="h-12 w-12 md:h-16 md:w-16"  alt="">
+                <span class="text-[12px] font-medium md:text-[16px]">Rabit-fire</span>
+            </div>
+            <div class="flex flex-col min-h-24 min-w-24 justify-center items-center bg-white border rounded-xl border-gray-300">
+                <img src="asset 3.png" class="h-12 w-12 md:h-16 md:w-16"  alt="">
+                <span class="text-[12px] font-medium md:text-[16px]">Rabit-fire</span>
+            </div>
+            <div class="flex flex-col min-h-24 min-w-24 justify-center items-center bg-white border rounded-xl border-gray-300">
+                <img src="asset 28.png" class="h-12 w-12 md:h-16 md:w-16"  alt="">
+                <span class="text-[12px] font-medium md:text-[16px]">Rabit-fire</span>
+            </div>
+            <div class="flex flex-col min-h-24 min-w-24 justify-center items-center bg-white border rounded-xl border-gray-300">
+                <img src="asset 29.png" class="h-12 w-12 md:h-16 md:w-16"  alt="">
+                <span class="text-[12px] font-medium md:text-[16px]">Rabit-fire</span>
+            </div>
+            <div class="flex flex-col min-h-24 min-w-24 justify-center items-center bg-white border rounded-xl border-gray-300">
+                <img src="asset 3.png" class="h-12 w-12 md:h-16 md:w-16"  alt="">
+                <span class="text-[12px] font-medium md:text-[16px]">Rabit-fire</span>
+            </div>
+            <div class="flex flex-col min-h-24 min-w-24 justify-center items-center bg-white border rounded-xl border-gray-300">
+                <img src="asset 3.png" class="h-12 w-12 md:h-16 md:w-16"  alt="">
+                <span class="text-[12px] font-medium md:text-[16px]">Rabit-fire</span>
+            </div>
+       </div>
+    </div>
+    <!-- step by step  -->
+     <div id="step" class="max-w-7xl mt-10 mx-auto lg:mt-30 px-6 py-12 lg:px-8 ">
+            <h2 class="font-display text-5xl font-medium lg:font-semibold">How it works</h2>
+            <div id="bootstrap-container" class="flex flex-col px-8 py-12 rounded-xl border border-yellow-200  justify-center lg:flex-row mt-7">
+                <div id="container1" class="lg:w-1/2">
+                <span class="rounded-md border border-yellow-300  font-display bg-yellow-50 px-2 py-1 w-fit">Step 1</span>
+                <h2 class="text-2xl md:text-3xl font-medium mt-4 lg:mt-6">Bootstrap straight from your web app</h2>
+                <p class="text-gray-500 text-sm lg:text-lg mt-3">Copy and paste your web app url into Desktop.Customize yuor app and design,app icon and window frame Ui with no code.</p>
+<div id="check-item" class="flex justify-evenly  mt-5">
+   <div class="flex">
+    <div class="flex flex-col gap-[15px] text-[13px] lg:text-base lg:gap-3 text-gray-400"><i class="fa-solid fa-check"></i>
+        <i class="fa-solid fa-check"></i>
+        <i class="fa-solid fa-check"></i>
+    </div>
+    <div class="mx-2">
+        <ul>Multiple Window</ul>
+        <ul class=" border border-y-slate-400 border-x-white border-opacity-30 hover:border-opacity-80">offline support</ul>
+        <ul class=" border border-y-slate-400 border-x-white border-t-white border-opacity-30 hover:border-opacity-80">Luanch on startup</ul>
+    </div>
+        </div>
+        <div class="flex">
+            <div class="flex flex-col  gap-[15px] text-[13px] lg:text-base lg:gap-3 text-gray-400"><i class="fa-solid fa-check"></i>
+                <i class="fa-solid fa-check"></i>
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <div class="mx-2">
+                <ul>Menubar/tray menus</ul>
+                <ul class=" border border-y-slate-400 border-x-white border-opacity-30 hover:border-opacity-80">Customisable menus</ul>
+                <ul class=" border border-y-slate-400 border-x-white border-t-white border-opacity-30 hover:border-opacity-80">Tabs(Mac only)</ul>
+            </div>
+                </div>
+</div>
+
+            </div>
+            <div id="container2" class="pt-10 lg:pt-0">
+                <img src="asset 66.svg" alt="">
+            </div>
+            </div>
+            <div id="bootstrap-container" class="flex flex-col px-8 py-12 rounded-xl border border-yellow-200  justify-center lg:flex-row mt-4">
+                <div id="container1" class="lg:w-1/2">
+                <span class="rounded-md border border-yellow-300  font-display bg-yellow-50 px-2 py-1 w-fit">Step 2</span>
+                <h2 class="text-2xl md:text-3xl font-medium mt-4 lg:mt-6">Bootstrap straight from your web app</h2>
+                <p class="text-gray-500 text-sm lg:text-lg mt-3">Copy and paste your web app url into Desktop.Customize yuor app and design,app icon and window frame Ui with no code.</p>
+<div id="check-item" class="flex justify-evenly  mt-5">
+   <div class="flex">
+    <div class="flex flex-col gap-[15px] text-[13px] lg:text-base lg:gap-3 text-gray-400"><i class="fa-solid fa-check"></i>
+        <i class="fa-solid fa-check"></i>
+        <i class="fa-solid fa-check"></i>
+    </div>
+    <div class="mx-2">
+        <ul>Multiple Window</ul>
+        <ul class=" border border-y-slate-400 border-x-white border-opacity-30 hover:border-opacity-80">offline support</ul>
+        <ul class=" border border-y-slate-400 border-x-white border-t-white border-opacity-30 hover:border-opacity-80">Luanch on startup</ul>
+    </div>
+        </div>
+        <div class="flex">
+            <div class="flex flex-col  gap-[15px] text-[13px] lg:text-base lg:gap-3 text-gray-400"><i class="fa-solid fa-check"></i>
+                <i class="fa-solid fa-check"></i>
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <div class="mx-2">
+                <ul>Menubar/tray menus</ul>
+                <ul class=" border border-y-slate-400 border-x-white border-opacity-30 hover:border-opacity-80">Customisable menus</ul>
+                <ul class=" border border-y-slate-400 border-x-white border-t-white border-opacity-30 hover:border-opacity-80">Tabs(Mac only)</ul>
+            </div>
+                </div>
+</div>
+
+            </div>
+            <div id="container2" class="pt-10 lg:pt-0">
+                <img src="asset 66.svg" alt="">
+            </div>
+            </div>
+            <div id="bootstrap-container" class="flex flex-col px-8 py-12 rounded-xl border border-yellow-200  justify-center lg:flex-row mt-4">
+                <div id="container1" class="lg:w-1/2">
+                <span class="rounded-md border border-yellow-300  font-display bg-yellow-50 px-2 py-1 w-fit">Step 3</span>
+                <h2 class="text-2xl md:text-3xl font-medium mt-4 lg:mt-6">Bootstrap straight from your web app</h2>
+                <p class="text-gray-500 text-sm lg:text-lg mt-3">Copy and paste your web app url into Desktop.Customize yuor app and design,app icon and window frame Ui with no code.</p>
+<div id="check-item" class="flex justify-evenly  mt-5">
+   <div class="flex">
+    <div class="flex flex-col gap-[15px] text-[13px] lg:text-base lg:gap-3 text-gray-400"><i class="fa-solid fa-check"></i>
+        <i class="fa-solid fa-check"></i>
+        <i class="fa-solid fa-check"></i>
+    </div>
+    <div class="mx-2">
+        <ul>Multiple Window</ul>
+        <ul class=" border border-y-slate-400 border-x-white border-opacity-30 hover:border-opacity-80">offline support</ul>
+        <ul class=" border border-y-slate-400 border-x-white border-t-white border-opacity-30 hover:border-opacity-80">Luanch on startup</ul>
+    </div>
+        </div>
+        <div class="flex">
+            <div class="flex flex-col  gap-[15px] text-[13px] lg:text-base lg:gap-3 text-gray-400"><i class="fa-solid fa-check"></i>
+                <i class="fa-solid fa-check"></i>
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <div class="mx-2">
+                <ul>Menubar/tray menus</ul>
+                <ul class=" border border-y-slate-400 border-x-white border-opacity-30 hover:border-opacity-80">Customisable menus</ul>
+                <ul class=" border border-y-slate-400 border-x-white border-t-white border-opacity-30 hover:border-opacity-80">Tabs(Mac only)</ul>
+            </div>
+                </div>
+</div>
+
+            </div>
+            <div id="container2" class="pt-10 lg:pt-0">
+                <img src="asset 66.svg" alt="">
+            </div>
+            </div>
+     </div>
+     <div id="customer-service-big-parent" class="mt-8">
+        <h2 class="text-2xl font-medium font-display px-6">Customer stories</h2>
+        <div id="customer-container-small-parent" class=" border  px-6 py-12 rounded-xl gap-4 lg:gap-0 flex flex-col lg:flex-row justify-evenly w-fit">
+            <div id="inner-div1-child1" class="flex flex-col ">
+                <img class="object-cover h-10 w-40" src="asset 44.svg" alt="">
+                <p class=" text-sm lg:text-base text-gray-500 mt-3 lg:mt-4 lg:w-3/4">Clickup used to Desktop to get their desktop app in front of customer in days instead of months.</p>
+                <div id="button-section" class="items-center pt-6 lg:pt-9">
+                    <button class=" text-sm font-medium lg:text-base border border-yellow-200 rounded-lg bg-yellow-50 px-2 py-1 text-yellow-700"><span> <i class="fa-solid fa-check px-2 text-xs text-yellow-700"></i></span>Chromeless UI</button>
+                    <button class=" text-sm font-medium lg:text-base border border-yellow-200  rounded-lg bg-yellow-50 px-2 py-1 text-yellow-700"><span> <i class="fa-solid fa-check px-2 text-xs text-yellow-700"></i></span>Native spellcheck</button>
+                    <div class="mt-2">
+                    <button class=" text-sm font-medium  lg:text-base border border-yellow-200  rounded-lg bg-yellow-50 px-2 py-1 text-yellow-700"><span> <i class="fa-solid fa-check px-2 text-xs text-yellow-700"></i></span>Tasktime in menubar</button>
+                    <button class=" text-sm font-medium lg:text-base border border-yellow-200  rounded-lg bg-yellow-50 px-2 py-1 text-yellow-700"><span> <i class="fa-solid fa-check px-2 text-xs text-yellow-700"></i></span>Global hot key to create task</button>
+                </div>
+                <p class=" lg:w-3/4 text-sm lg:text-base text-gray-400 pt-6 lg:pt-9">"To Desktop provided us with a <span class="text-gray-600">polished desktop app</span> in no time.Their expert team guided us through a smooth migration from our outdated legacy desktop app,enabling us to deliver <span class="text-gray-600">new and improved features</span> to our customer within days."</p>
+                <div id="customer-card" class=" px-2 py-2  hover:shadow-lg  shadow-md items-center gap-3 w-fit flex border rounded-md mt-6 lg:mt-8">
+                    <img src="asset 45.jpeg" class="border rounded-full object-cover" alt="">
+                    <div class="flex flex-col">
+                    <h2 class="font-medium text-sm lg:text-base">Zeb Evans</h2>
+                    <span class="text-xs lg:text-sm text-gray-500">Founder & CEO, ClickUp</span>
+                </div>
+                </div>
+                </div>
+            </div>
+            <div id="inner-div2" class="lg:size-1/2"><img class="object-cover overflow-hidden" src="asset 46.png" alt="">
+            </div>
+        </div>
+     </div>
+     <!-- FaQ -->
+      <div id="faq-container" class="mt-20 ">
+<h2 class="text-3xl  lg:text-4xl font-semibold px-5">FAQs</h2>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-5 pt-5 lg:pt-8 px-4 items-start">
+    <div class="group rounded-xl border border-gray-200 bg-gray-100 p-5">
+        <dt class=" cursor-pointer flex justify-between items-center" aria-controls="faq1">
+            <p class="font-medium text-lg">Is desktop for me?</p>
+            <i  id="boxes" class="fa-solid fa-chevron-up -rotate-180 transition ease-in"></i>
+        </dt>
+        <dd id="faq1" class="  hidden pt-3">
+            <p>That depend if you would like to distribute your web app to ypur user as a downloadable desktop app then to Desktop is for you </p>
+        </dd>
+    </div>
+    <div class="group rounded-xl border border-gray-200 bg-gray-100 p-5">
+        <dt class=" cursor-pointer flex justify-between items-center" aria-controls="faq2">
+            <p class="font-medium text-lg">Is desktop for me?</p>
+            <i  id="boxes" class="fa-solid fa-chevron-up -rotate-180 transition ease-in"></i>
+        </dt>
+        <dd id="faq2" class="  hidden pt-3">
+            <p>That depend if you would like to distribute your web app to ypur user as a downloadable desktop app then to Desktop is for you </p>
+        </dd>
+    </div>
+    <div class="group rounded-xl border border-gray-200 bg-gray-100 p-5">
+        <dt class=" cursor-pointer flex justify-between items-center" aria-controls="faq3">
+            <p class="font-medium text-lg">Is desktop for me?</p>
+            <i  id="boxes" class="fa-solid fa-chevron-up -rotate-180 transition ease-in"></i>
+        </dt>
+        <dd id="faq3" class="  hidden pt-3">
+            <p>That depend if you would like to distribute your web app to ypur user as a downloadable desktop app then to Desktop is for you </p>
+        </dd>
+    </div>
+    <div class="group rounded-xl border border-gray-200 bg-gray-100 p-5">
+        <dt class=" cursor-pointer flex justify-between items-center" aria-controls="faq4">
+            <p class="font-medium text-lg">Is desktop for me?</p>
+            <i  id="boxes" class="fa-solid fa-chevron-up -rotate-180 transition ease-in"></i>
+        </dt>
+        <dd id="faq4" class="  hidden pt-3">
+            <p>That depend if you would like to distribute your web app to ypur user as a downloadable desktop app then to Desktop is for you </p>
+        </dd>
+    </div>
+</div>
+</div>
+<footer>
+    <div class="mt-11">
+        <div id="inner-parent" class="border border-sky-100 flex flex-col  gap-5 px-4 lg:justify-evenly  lg:flex-row">
+            <div id="child1">
+            <img src="asset 0.png" alt="">
+            <span class="flex flex-col text-xs text-gray-400">Modern desktop
+          <span class="text-blue-500 text-lg font-display font-medium lg:text-lg"> Make it real !</span>
+</span>
+</div>
+<div id="child3" class="lg:text-lg">
+    <h2 class="text-blue-500 font-medium">HELPFUL LINKS</h2>
+    <ul class="text-blue-500 pt-2 hover:cursor-pointer">
+        <li><i class=" text-blue-800 fa-solid fa-angle-right px-2"></i>Courses</li>
+        <li><i class=" text-blue-800 fa-solid fa-angle-right  px-2"></i>Privacy policy</li>
+        <li><i class=" text-blue-800 fa-solid fa-angle-right  px-2"></i>Refund Policy</li>
+        <li><i class=" text-blue-800 fa-solid fa-angle-right  px-2"></i>Terms & Conditions</li>
+       </ul>
+</div>
+
+<div id="child2" class="lg:text-lg">
+    <h2 class="font-medium">GET IN TOUCH</h2>
+    <ul class="pt-2 hover:cursor-pointer">
+     <li><i class=" text-blue-800 fa-solid fa-envelope px-1"></i>@codeX</li>
+     <li><i class=" text-blue-800 fa-solid fa-envelope px-1"></i>@codeX</li>
+     <li><i class=" text-blue-800 fa-solid fa-envelope px-1"></i>@codeX</li>
+     <li><i class=" text-blue-800 fa-solid fa-headset px-1"></i>Support Team : 10am-6pm</li>
+    </ul>
+</div>
+
+<div id="child4" class="lg:text-lg">
+    <h2 class=" font-medium">CONNECT WITH US</h2>
+    <ul class="pt-2">
+        <li><a href="https://in.linkedin.com/in/dhattarwalaman">Linkdin</a><i class="fa-brands fa-linkedin px-2"></i></li>
+        <li><a href="https://twitter.com/AmanDhattarwal?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">Twitter</a><i class="fa-brands fa-twitter px-2"></i></li>
+  <li><a href="https://www.facebook.com/dhattarwalaman">Facebook</a><i class="fa-brands fa-facebook px-2"></i></li>
+  <li><a href="https://www.instagram.com/officialapnacollege/">Instagram</a><i class="fa-brands fa-instagram px-2"></i></li>
+ 
+       </ul>
+</div>
+
+        </div>
+        <p class="items-center flex justify-center pt-5 lg:pt-8">Copyright © 2024</p>
+    </div>
+</footer>
+    <div class="h-[1000px]"></div>
+    </main>
+  <script src="scriptsing.js"></script>
+    </body>
