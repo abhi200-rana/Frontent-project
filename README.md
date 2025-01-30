@@ -1,1 +1,1 @@
-This is frontent Tailwind practice project ok
+<b>This is frontent Tailwind practice project ok</b>
